@@ -34,7 +34,7 @@
     background-color: blanchedalmond;
 
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: 1fr 1fr / 2fr 1fr;
 }
 
 .content {
@@ -50,43 +50,170 @@
 
 }
 
-.buttons > button {
-    background-color: #22c55e;
-    border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    outline: none;
-    border: 1px solid #22c55e;
+/* .searchbar, .userinfo, .greet {
+    border: 2px solid black;
+} */
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    padding-left: 100px;
 }
 
-.dash {
-    fill: white;
+.searchbar > input {
+    background-color: #e2e8f0;
+    height: 30px;
+    width: 600px;
+
+    outline: none;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.searchbar > svg {
+    width: 30px;
+    height: 30px;
+    /* border: 2px solid black; */
+}
+
+.userinfo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.userinfo > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.userinfo > img {
+    width: 50px;
+    height: 50px;
+}
+
+/* .userinfo > svg, .userinfo > img, #username {
+    border: 2px solid black;
+} */
+
+#username {
+    font-size: 20px;
+    font-weight: 700;
+}
+.greet {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 200px 1fr;
+}
+
+.greet > .greetprofile {
+    /* border: 2px solid black; */
+
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.greetprofile > img {
+    width: 80px;
+    height: 80px;
+}
+
+/* .subtext, .maintext {
+    border: 2px solid black;
+} */
+
+.subtext {
+    font-size: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.maintext {
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    /* border: 2px solid black; */
+}
+
+.buttons > button {
+    background-color: #22c55e;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    outline: none;
+    border: 1px solid #22c55e;
+    border-radius: 1em;
+    padding: 10px 25px;
+}
+
+.greet, .button {
+    padding-bottom: 20px;
+}
+
+.sidebar{
+    display: grid;
+    grid-template-rows: 100px 250px 150px;
 }
 
 #dashboard {
     width: 50px;
-    height: 50px
+    height: 50px;
+    fill: white;
 }
 
 .brand {
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 200px;
+    width: 220px;
+    height: 100px;
 
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    gap: 5px;
+    padding-bottom: 5px;
 }
 
-.navigations {
-    border: 2px solid black;
+.navigations, .navigations2 {
+    /* border: 2px solid black; */
     width: 200px;
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.navigations2 {
+    padding-top: 20px;
 }
 
 .navSelect {
     display: flex;
     align-items: center;
     justify-content: start;
+
+    gap: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
 }
 
 .svgNav {
