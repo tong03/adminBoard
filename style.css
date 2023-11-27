@@ -348,15 +348,17 @@ h3 + div {
 }
 
 .Ticon{
-    display: flex;
+    display: grid;
     /* border: 1px solid black; */
     width: 200px;
+    grid-template-columns: 1fr 1fr;
 
     justify-content: space-between;
 }
 
 .Ticon > .i-text{
     align-self: center;
+    width: auto;
 }
 
 .i-text > :last-child {
